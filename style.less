@@ -1,0 +1,226 @@
+/*
+Theme Name: Interaction Designer
+Description: Tema per il mio sito personale.
+Author: Salvatore Laisa
+Author URI: http://www.salvatorelaisa.net
+Version: 3.0
+Tags: sidebar, dynamic menu, responsive, bootstrap, html5, css3, jquery, animation, custom post type
+
+License: 
+License URI:
+
+*/
+
+// Variabili generali
+@grigino: #f2f2f2;
+@nero: #202020;
+@link: #0096da;
+@navlink: #faac18;
+@fontBase: 'Open Sans', Helvetica, Arial, sans-serif;
+@ombra: 0px 0px 20px rgba(0, 0, 0, 0.3);
+@testiBase: #333;
+@animBase: all 0.4s ease;
+
+// Generali
+body{
+	font-family: @fontBase;
+	font-weight: 300;
+	background-color: @grigino;
+	color: @testiBase;
+}
+a{
+	color: @link;
+}
+h1,h2,h3,h4{
+	font-weight: 700;
+}
+h4{
+	font-size: 22px;
+}
+
+// Bootstrap
+.btn-primary{
+	background-color: @link;
+}
+.btn-primary:hover{
+	background-color: darken(@link,7%);
+}
+
+// Navigazione
+.nav-pills>li>a{
+	padding: 10px 15px;
+	font-size: 18px;
+	background-color: @navlink;
+	color: white;
+	margin: 40px 14px 0px;
+	-webkit-transition: @animBase;
+	transition: @animBase;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+}
+.nav-pills>li>a:hover{
+	background-color: darken(@navlink,10%);
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+}
+
+// Layout
+#principale{
+	padding-bottom: 30px;
+}
+#presentazione .box{
+	position: relative;
+	.foto{
+		position: absolute;
+		background: #000 url(img/io.jpg) center no-repeat;
+		height: 100%;
+		top: 0;
+		right: 0;
+	}
+	p{
+		width: 85%;
+	}
+}
+
+
+// Box
+.box{
+	background-color: white;
+	box-shadow: @ombra;
+	padding: 15px;
+	margin: 15px 0 15px;
+	font-size: 17px;
+	line-height: 23px;
+}
+
+// Skills
+#skills{
+	a{
+		color: #333;
+	}
+	.box{
+		padding: 5px 15px;
+		position: relative;
+		overflow: hidden;
+	}
+	i{
+		font-size: 60px;
+		position: absolute;
+		bottom: -70px;
+		right: 20px;
+		-webkit-transition: all 0.8s ease;
+		transition: all 0.8s ease;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		color: white;
+	}
+	.box:hover i{
+		bottom: 10px;
+		right: 40px;
+		-webkit-transform: rotate(10deg);
+		transform: rotate(10deg);
+		color: #777;
+	}
+}
+
+// Ricerca
+#cerca{
+	input{
+		width: 50%;
+	}
+}
+
+// Footer
+#fondo{
+	background-color: @nero;
+	color: #eee;
+	padding: 20px 0px 70px;
+	h4{
+		border-bottom: 1px solid #444;
+		padding-bottom: 10px;
+		margin-bottom: 6px;
+	}
+	p, li a, label{
+		color: #ccc;
+	}
+	a{
+		color: @navlink;
+		-webkit-transition: @animBase;
+		transition: @animBase;
+	}
+	p{
+		font-size: 16px;
+		line-height: 24px;
+		font-style: italic;
+		margin-bottom: 15px;
+	}
+	li{
+		font-size: 20px;
+		line-height: 48px;
+		letter-spacing: 1px;
+		width: 50%;
+		float: left;
+		a{
+			display: block;
+			-webkit-transform-origin: left;
+			transform-origin: left;
+		}
+		a:hover{
+			color: @link;
+			text-decoration: none;
+			-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+	}
+	ul::after{
+		display: block;
+		content: " ";
+		clear: both;
+	}
+}
+
+
+
+// Smartphone
+@media (max-width: 480px) {
+
+	p{
+		text-align: justify;
+	}
+
+	body{
+		padding: 0;
+	}
+	.container{
+		padding: 0 20px;
+	}
+	.nav-pills>li{
+		box-sizing: border-box;
+		float: left;
+		width: 50%;
+		border-bottom: 1px solid darken(@navlink,8%);
+		border-right: 1px solid darken(@navlink,8%);
+	}
+	.nav-pills>li:nth-child(4),
+	.nav-pills>li:nth-child(3){
+		border-bottom: 0;
+	}
+	.nav-pills>li>a{
+		margin: 0;
+		display: block;
+		padding: 15px 15px;
+		text-align: center;
+	}
+	#presentazione .box{
+		p{
+			width: 100%;
+		}
+		.foto{
+			position: static;
+			height: 180px;
+		}
+	}
+	footer{
+		h4{
+			margin-top: 30px;
+		}
+	}
+}
