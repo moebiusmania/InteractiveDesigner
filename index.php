@@ -33,22 +33,26 @@
 		<?php wp_head(); ?>
 
 		<!-- LESS -->
-		<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/style.less">
-		<script src="<?php bloginfo('template_url'); ?>/js/less-1.3.3.min.js"></script>
+		<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/less/style.less">
+		<script src="<?php bloginfo('template_url'); ?>/less/less-1.3.3.min.js"></script>
 
 		<!-- Google Analytics -->
 
 	</head>
 	<body>
 
+		<!-- Blocco principale -->
 		<section id="principale" class="container">
 			<header class="row">
+				<!-- Intestazione -->
 				<hgroup class="span6">
 					<h1><a href="<?php bloginfo('url'); ?>">
 						<img src="<?php bloginfo('template_url'); ?>/img/sl.svg" 
 						alt="<?php bloginfo('name'); ?>">
 					</a></h1>
 				</hgroup>
+
+				<!-- Navigazione -->
 				<nav class="span6">
 					<ul class="nav nav-pills">
 						<li><a href=""><i class="icon-book"></i> Blog</a></li>
@@ -58,6 +62,8 @@
 					</ul>
 				</nav>
 			</header>
+
+			<!-- Blocco presentazione -->
 			<section id="presentazione" class="row">
 				<div class="span12">
 					<article class="box">
@@ -68,10 +74,12 @@
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<div class="foto span2"></div>
+						<div class="foto span2" style="background-image: url(<?php bloginfo('template_url'); ?>/img/io.jpg)"></div>
 					</article>
 				</div>
 			</section>
+
+			<!-- Skill cards -->
 			<section id="skills" class="row">
 				<a href="">
 					<section class="span4">
@@ -103,11 +111,13 @@
 					</section>
 				</a>
 			</section>
+
+			<!-- Form di ricerca -->
 			<section id="cerca" class="row">
 				<div class="span12">
-					<form action="" id="cerca" class="box form-inline">
-						<label>Se stavi cercando qualcosa di preciso</label>
-						<input type="text" placeholder="prova a digitarlo qui" >
+					<form role="search" action="<?php echo home_url( '/' ); ?>" method="get" id="cerca" class="box form-inline">
+						<label for="s">Se stavi cercando qualcosa di preciso</label>
+						<input type="text" name="s" placeholder="prova a digitarlo qui" >
 						<button class="btn btn-primary">
 							<i class="icon-white icon-search"></i>
 							Cerca
@@ -117,6 +127,7 @@
 			</section>
 		</section>
 
+		<!-- Piede di pagina -->
 		<section id="fondo">
 			<footer class="container">
 				<section class="row">
@@ -161,9 +172,7 @@
 
 	</body>
 
-	<!-- JS -->
+	<!-- Importazioni WordPress -->
 	<?php wp_footer(); ?>
-	<script src="js/jquery-2.0.2.min.js"></script>
-	<script src="js/sl.3.0.js"></script>
 
 </html>
