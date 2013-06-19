@@ -1,12 +1,13 @@
 		<section id="fondo">
 			<footer class="container">
 				<section class="row">
-					<div class="span4">
-						<h4>Disclaimer tecnologico</h4>
-						<p>Se stai vedendo questo sito in modo incasinato stai usando un browser vecchio, molto vecchio e anche insicuro.
-						Nel realizzare questo sito ho optato per un utilizzo massiccio delle <a href="http://it.wikipedia.org/wiki/HTML5" target="_blank">ultime tecnologie web</a>, cercando un compromesso tra retro-compatibilita' e nuove tecniche, scegliendo deliberatamente di "escludere" alcuni browser.</p>
-						<p>Tuttavia nel mio lavoro quotidiano la compatibilita' dei miei siti su tutti i browser e' e rimmarra' una <strong>priorita'</strong>!</p>
-					</div>
+					
+					<?php dynamic_sidebar('Footer - colonna 1'); ?>
+
+					<?php dynamic_sidebar('Footer - colonna 2'); ?>
+
+					<?php dynamic_sidebar('Footer - colonna 3'); ?>
+
 					<div class="span4">
 						<h4>The social networks</h4>
 						<ul class="unstyled">
