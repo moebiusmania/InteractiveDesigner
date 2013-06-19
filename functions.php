@@ -5,6 +5,7 @@ add_action('after_setup_theme','txtEditor');
 add_action('after_setup_theme', 'immEvidenza');
 add_action('wp_enqueue_scripts', 'caricaScripts');
 add_action('widgets_init', 'creaAreeWidget');
+add_action('init', 'mieiWidget');
 
 // Filtri
 add_filter( 'excerpt_length', 'riassunti', 999 );
@@ -42,6 +43,11 @@ function caricaScripts(){
 /* Definizioni sidebars */
 function creaAreeWidget(){
 	include('funzioni/sidebars.php' );
+}
+
+/* Creo mi miei custom widget */
+function mieiWidget(){
+	
 }
 
 ?>
