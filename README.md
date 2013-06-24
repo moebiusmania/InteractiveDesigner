@@ -19,16 +19,36 @@ Non esistono sorgenti grafici del layout, è stato progettato direttamente a cod
 - Custom headers (immagine di testata modificabile da backend)
 - Immagini in evidenza per pagine, articoli, home page e portfolio
 - Custom post type per il portfolio
-- Widget ad hoc per il tema: 'Skill box', 'Link social'
+- Widget ad hoc per il tema: 'Skill box', 'Link social', 'Form contatto rapido'
+- Form di contatto rapido con AJAX
 - Font dell'editor di WordPress modificato
 
 Il tema è stato progettato su WordPress 3.5 ma dovrebbe essere funzionante sulle versioni dalla 3.0 in poi.
+
+### Template di pagina
+Sono inclusi i "classici" template di WordPress (**home page, blog, pagine standard, articoli, risultati di ricerca**) e ne sono stati aggiunti di nuovi:
+
+- Portfolio:
+- Contatti:
 
 ### Functions.php
 Le funzionalità che non interessano possono essere disattivate commentando la riga dell'azione/filtro responsabile all'inizio del file functions.php .
 
 ### Compatibilità cross-browser
 Il tema si basa fortemente su features CSS3 per il layout, anche se non è specificatamente pensato per la retro compatibilità (IE8 e inferiori) anche in situazioni di degrado rimane utilizzabile.
+
+Testato su
+- Chrome 28
+- Firefox 21
+
+### Dispositivi
+Essendo il layout basato sulla griglia di Bootstrap in sito si adatta su 5 layout:
+
+- 1200 pixel in su: computer laptop e desktop
+- 980 pixel in su: desktop "classici" e tablet orientati in orizzontale
+- 768 pixel in su: tablet orientati in verticale
+- 767 pixel in giu: smartphones orientati in orizzontale
+- 480 pixel in giu: smartphones orientati in verticale
 
 ### Licenza
 
