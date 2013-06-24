@@ -7,12 +7,33 @@ add_action('wp_enqueue_scripts', 'caricaScripts');
 add_action('widgets_init', 'creaAreeWidget');
 add_action('init', 'mieiWidget');
 add_action('init', 'creaMenu');
+add_action('init', 'portfolio' );
 
 // Filtri
 add_filter( 'excerpt_length', 'riassunti', 999 );
 
 /* ----------------------------------------------------- */
 
+
+/* Definisco un custom post type per il portfolio */
+function portfolio(){
+	register_post_type( 'portfolio',
+          array(
+               'labels' => array(
+                    'name' => __( 'Portfolio' ),
+                    'singular_name' => __( 'Lavoro' ),
+                    'add_new' => __( 'Aggiungi un lavoro' ),
+                    'all_items' => __( 'Tutti i lavori' ),
+                    'add_new_item' => __( 'Aggiungi un nuovo lavoro' ),
+               ),
+          'public' => true,
+          'menu_position' => 5,
+          'has_archive' => true,
+          'supports' => array('title', 'editor', 'revisions', 'excerpt', 'thumbnail'),
+          'taxonomies' => array('tipoLavori'),
+          )
+     );
+}
 
 /* Definire menu dinamici */
 function creaMenu(){
