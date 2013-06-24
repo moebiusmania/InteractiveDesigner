@@ -35,9 +35,9 @@ Sono inclusi i "classici" template di WordPress (**home page, blog, pagine stand
 ### Navigazione con icone
 La navigazione è gestita dalla backend dall'interfaccia di WordPress presente in Aspetto -> Menu. E' possibile aggiungere delle icone ai pulsanti della navigazione abilitando la descrizione
 
-e inserendo come descrizione un tag con il codice dell'icona desiderata:
+e inserendo come descrizione il nome dell'icona desiderata:
 
-`<i class="icon-pencil"></i>`
+`icon-pencil`
 
 le icone disponibili sono quelle presenti in Font Awesome, qui trovate una [tabella di riferimento](http://fortawesome.github.io/Font-Awesome/cheatsheet/).
 

@@ -53,20 +53,12 @@
 				</hgroup>
 
 				<!-- Navigazione -->
-				<!-- <nav class="span6">
-					<ul class="nav nav-pills">
-						<li><a href=""><i class="icon-book"></i> Blog</a></li>
-						<li><a href=""><i class="icon-user"></i> About</a></li>
-						<li><a href=""><i class="icon-pencil"></i> Portfolio</a></li>
-						<li><a href=""><i class="icon-envelope"></i> Contatti</a></li>
-					</ul>
-				</nav> -->
-
 				<?php wp_nav_menu(array(
 					'theme_location' => 'principale',
 					'container' => 'nav',
 					'container_class' => 'span6',
-					'menu_class' => 'nav nav-pills'
+					'menu_class' => 'nav nav-pills',
+					'walker' => new walkerIcone()
 				)) ?>
 
 			</header>
