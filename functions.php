@@ -5,7 +5,6 @@ add_action('after_setup_theme','txtEditor');
 add_action('after_setup_theme', 'immEvidenza');
 add_action('wp_enqueue_scripts', 'caricaScripts');
 add_action('widgets_init', 'creaAreeWidget');
-add_action('init', 'mieiWidget');
 add_action('init', 'creaMenu');
 add_action('init', 'portfolioType' );
 
@@ -73,13 +72,9 @@ function creaAreeWidget(){
 	include('funzioni/sidebars.php' );
 }
 
-/* Creo mi miei custom widget */
-function mieiWidget(){
-	
-}
-
 /* Inclusioni varie */
 include('funzioni/walker.php' );
+include('funzioni/skill_card.php' );
 
 
 ?>

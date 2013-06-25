@@ -27,35 +27,9 @@
 
 			<!-- Skill cards -->
 			<section id="skills" class="row">
-				<a href="">
-					<section class="span4">
-						<div class="box">
-							<h3>Test</h3>
-							<p>prova</p>
-							<i class="icon-off"></i>
-						</div>
-					</section>
-				</a>
 
-				<a href="">
-					<section class="span4">
-						<div class="box">
-							<h3>Test</h3>
-							<p>prova</p>
-							<i class="icon-off"></i>
-						</div>
-					</section>
-				</a>
+				<?php dynamic_sidebar('Box animati'); ?>
 
-				<a href="">
-					<section class="span4">
-						<div class="box">
-							<h3>Test</h3>
-							<p>prova</p>
-							<i class="icon-off"></i>
-						</div>
-					</section>
-				</a>
 			</section>
 
 			<!-- Form di ricerca -->

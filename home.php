@@ -4,13 +4,14 @@
 			<section id="presentazione" class="row blog">
 				<div class="span8">
 					
-					<article class="box <?php if(is_sticky($id)){ ?>feat<?php } ?>" >
+					<article class="box" >
 					
 					<!-- The Loop -->
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	
+					
 						<?php if(is_sticky($id)){ ?>
+							<div class="feat">
 							<span class="feat">in primo piano</span>
 						<?php } ?>
 
@@ -20,10 +21,14 @@
 							<span class="overlay"></span>
 							<span class="commenti badge badge-info"><?php comments_number('0', '1', '%') ?></span>
 						</figure>
-						
+
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="meta">Data astrale <?php the_time("d F Y"); ?> in <?php the_category(','); ?>.</p>
 						<?php the_excerpt(); ?>
+
+						<?php if(is_sticky($id)){ ?>
+							</div>
+						<?php } ?>
 					
 					<hr>
 
@@ -35,6 +40,23 @@
 					<?php endif; ?>
 					<!-- /The Loop -->
 					
+					<!-- Paginazione -->
+					<div class="pagination pagination-large">
+					<?php
+					global $wp_query;
+			
+					$big = 999999999; // need an unlikely integer
+			
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $wp_query->max_num_pages,
+						'type' => 'list',
+					) );
+					?>
+					</div>
+
 					</article>
 
 				</div>
