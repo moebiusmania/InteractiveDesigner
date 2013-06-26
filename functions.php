@@ -75,6 +75,8 @@ function creaAreeWidget(){
 /* Inclusioni varie */
 include('funzioni/walker.php' );
 include('funzioni/skill_card.php' );
+include('funzioni/link_social.php' );
+include('funzioni/contatto_rapido.php' );
 
 
 ?>

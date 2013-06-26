@@ -22,21 +22,7 @@
 							
 						</ul>
 					</div>
-					<div class="span4">
-						<h4>Contatto rapido</h4>
-						<form action="<?php bloginfo('template_url') ?>" method="get">
-							<label>Chi sei?</label>
-							<input name="mittente" type="text" placeholder="Sig Mario Rossi" class="input-block-level" required>
-							<label>Email di contatto</label>
-							<input name="indirizzo" type="email" placeholder="prova@indirizzo.it" class="input-block-level" required>
-							<label>Messaggio (breve)</label>
-							<textarea name="testo" class="input-block-level" required></textarea>	
-							<button class="btn btn-primary btn-block">
-								<i class="icon-white icon-envelope-alt"></i>
-								Invia messaggio!
-							</button>
-						</form>
-					</div>
+
 				</section>
 			</footer>
 		</section>

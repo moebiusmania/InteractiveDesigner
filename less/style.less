@@ -87,6 +87,8 @@ h4{
 #skills{
 	a{
 		color: #333;
+		-webkit-transition: @animBase;
+		transition: @animBase;
 	}
 	.box{
 		padding: 5px 15px;
@@ -109,7 +111,14 @@ h4{
 		right: 40px;
 		-webkit-transform: rotate(10deg);
 		transform: rotate(10deg);
-		color: #777;
+		color: white;
+		color: rgba(255,255,255,0.8);
+	}
+	a:hover{
+		.box{
+			background-color: @link;
+		}
+		color: white;
 	}
 }
 
