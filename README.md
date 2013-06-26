@@ -20,6 +20,7 @@ Non esistono sorgenti grafici del layout, è stato progettato direttamente a cod
 - Immagini in evidenza per pagine, articoli, home page e portfolio
 - Custom post type per il portfolio
 - Widget ad hoc per il tema: 'Skill box', 'Link social', 'Form contatto rapido'
+- Navigazione dinamica gestita da backend con icone
 - Form di contatto rapido con AJAX
 - Font dell'editor di WordPress modificato
 
@@ -45,12 +46,19 @@ le icone disponibili sono quelle presenti in Font Awesome, qui trovate una [tabe
 ### Functions.php
 Le funzionalità che non interessano possono essere disattivate commentando la riga dell'azione/filtro responsabile all'inizio del file functions.php .
 
+La definizione delle sidebars, i widget ad hoc e la classe walker per la navigazione sono sviluppati in file esterni e inseriti in functions con la funzione *include()*.
+
+### Fogli di stile
+I CSS del tema sono costruiti utilizzando **LESS** e compilati in un unico file style.css, tutti i sorgenti divisi in più file sono disponibili nella cartella */less* .
+
 ### Compatibilità cross-browser
 Il tema si basa fortemente su features CSS3 per il layout, anche se non è specificatamente pensato per la retro compatibilità (IE8 e inferiori) anche in situazioni di degrado rimane utilizzabile.
 
 Testato su
 - Chrome 28
 - Firefox 21
+- Safari 6
+- Opera 12 e Opera Next (Webkit)
 
 ### Dispositivi
 Essendo il layout basato sulla griglia di Bootstrap in sito si adatta su 5 layout:
