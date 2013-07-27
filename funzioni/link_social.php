@@ -61,6 +61,11 @@ class LinkSocial extends WP_Widget {
 		$url = $instance['url'];
 		$ico = $instance['ico'];
 		
+		// Render
+		echo $before_widget;
+		echo $before_title . $title . $after_title;
+
+		echo $after_widget;
 		
 	}
 }
