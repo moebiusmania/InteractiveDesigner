@@ -5,7 +5,7 @@ Il tema WordPress per il mio sito personale [salvatorelaisa.net](http://www.salv
 
 ### Librerie utilizzate
 - LESS per i CSS dinamici
-- Twitter Bootstrap (CSS), skin Flatstrap
+- Twitter Bootstrap (CSS) 2.3, skin Flatstrap
 - Font Awesome (CSS/Font)
 - jQuery 2 (JS)
 - Open Sans (FONT) tramite Google Fonts
@@ -61,7 +61,7 @@ Testato su
 - Opera 12 e Opera Next (Webkit)
 
 ### Dispositivi
-Essendo il layout basato sulla griglia di Bootstrap in sito si adatta su 5 layout:
+Essendo il layout basato sulla griglia di Bootstrap (2.3) in sito si adatta su 5 layout:
 
 - 1200 pixel in su: computer laptop e desktop
 - 980 pixel in su: desktop "classici" e tablet orientati in orizzontale

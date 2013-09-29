@@ -14,33 +14,43 @@ class LinkSocial extends WP_Widget {
 	
 	// Quello che viene mostrato nella backend
  	public function form( $instance ) {
-		if ( isset( $instance[ 'nome' ] ) ) {
-			$nome = $instance[ 'nome' ];
-			$url = $instance[ 'url' ];
-			$ico = $instance[ 'ico' ];
+		if ( isset( $instance['nome'] ) ) {
+			$nome = $instance['nome'];
+			$url = $instance['url'];
+			$ico = $instance['ico'];
 		}
 		else {
 			$nome = __( 'Social', 'text_domain' );
 			$url = __( '#', 'text_domain' );
 			$ico = __( 'icon-facebook-sign', 'text_domain' );
 		}
+
+		
 		?>
+
+		<input type="hidden" id="qta" name="<?php echo $this->get_field_name( 'nome' ); ?>" value="<?php echo(count($instance)); ?>">
+
+		<p>
+
+		<div class="riga">
+			<label for="<?php echo $this->get_field_id( 'nome' ); ?>"><?php _e( 'Nome:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'nome' ); ?>" name="<?php echo $this->get_field_name( 'nome' ); ?>" type="text" value="<?php echo esc_attr( $nome ); ?>" />
+			</p>
+			
+			<p>
+			<label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Url link:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>" />
+			</p>
+			
+			<p>
+			<label for="<?php echo $this->get_field_id( 'ico' ); ?>"><?php _e( 'Icona box:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'ico' ); ?>" name="<?php echo $this->get_field_name( 'ico' ); ?>" type="text" value="<?php echo esc_attr( $ico ); ?>" />
+			</p>
+		</div>
 		
 		<p>
-		<label for="<?php echo $this->get_field_id( 'nome' ); ?>"><?php _e( 'Nome:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'nome' ); ?>" name="<?php echo $this->get_field_name( 'nome' ); ?>" type="text" value="<?php echo esc_attr( $nome ); ?>" />
+			<button type="button" class="button widefat" id="linksocial_add">Aggiungi</button>
 		</p>
-		
-		<p>
-		<label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Url link:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>" />
-		</p>
-		
-		<p>
-		<label for="<?php echo $this->get_field_id( 'ico' ); ?>"><?php _e( 'Icona box:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'ico' ); ?>" name="<?php echo $this->get_field_name( 'ico' ); ?>" type="text" value="<?php echo esc_attr( $ico ); ?>" />
-		</p>
-		
 		<?php 
 	}
 	
@@ -70,5 +80,18 @@ class LinkSocial extends WP_Widget {
 	}
 }
 register_widget( 'LinkSocial' );
+
+function scriptLS(){
+	wp_register_script(
+		'azioniLS',
+		get_bloginfo('template_url').'/js/linksocial.js',
+		array('jquery'),
+		'1.0.0',
+		false
+	);
+	wp_enqueue_script('azioniLS');
+}
+
+add_action('admin_enqueue_scripts','scriptLS');
 
 ?>
