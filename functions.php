@@ -13,7 +13,6 @@ add_filter( 'excerpt_length', 'riassunti', 999 );
 
 /* ----------------------------------------------------- */
 
-
 /* Definisco un custom post type per il portfolio */
 function portfolioType(){
 	register_post_type( 'portfolio',
@@ -52,9 +51,7 @@ function txtEditor(){
 
 /* Attivare Featured Image */
 function immEvidenza(){
-	add_theme_support('post-thumbnails'); 
-	//set_post_thumbnail_size(200,200,true);
-  //add_image_size( 'blog', 1200, 150, true );
+	add_theme_support('post-thumbnails');
 }
 
 /* Registrazione scripts */

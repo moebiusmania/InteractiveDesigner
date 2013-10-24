@@ -22,14 +22,14 @@
 						</figure>
 
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p class="meta">Data astrale <?php the_time("d F Y"); ?> in <?php the_category(', '); ?>.</p>
+						<p class="meta">Data astrale <strong><?php the_time("d F Y"); ?></strong> in <?php the_category(', '); ?>.</p>
 						<?php the_excerpt(); ?>
+						
+						<p class="leggi"><a href="<?php the_permalink(); ?>">Leggi tutto <i class="icon-chevron-right"></i></a></p>
 
 						<?php if(is_sticky($id)){ ?>
 							</div>
 						<?php } ?>
-					
-						<p class="leggi"><a href="<?php the_permalink(); ?>">Leggi tutto <i class="icon-chevron-right"></i></a></p>
 
 					<hr>
 
