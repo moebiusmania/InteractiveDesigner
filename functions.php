@@ -53,7 +53,8 @@ function txtEditor(){
 /* Attivare Featured Image */
 function immEvidenza(){
 	add_theme_support('post-thumbnails'); 
-	set_post_thumbnail_size(200,200,true); 
+	//set_post_thumbnail_size(200,200,true);
+  //add_image_size( 'blog', 1200, 150, true );
 }
 
 /* Registrazione scripts */

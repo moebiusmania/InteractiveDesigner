@@ -17,19 +17,20 @@
 
 						<figure>
 							<?php the_post_thumbnail('thumbnail'); ?>
-							<a href="<?php the_permalink(); ?>">Leggi tutto &raquo;</a>
 							<span class="overlay"></span>
 							<span class="commenti badge badge-info"><?php comments_number('0', '1', '%') ?></span>
 						</figure>
 
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p class="meta">Data astrale <?php the_time("d F Y"); ?> in <?php the_category(','); ?>.</p>
+						<p class="meta">Data astrale <?php the_time("d F Y"); ?> in <?php the_category(', '); ?>.</p>
 						<?php the_excerpt(); ?>
 
 						<?php if(is_sticky($id)){ ?>
 							</div>
 						<?php } ?>
 					
+						<p class="leggi"><a href="<?php the_permalink(); ?>">Leggi tutto <i class="icon-chevron-right"></i></a></p>
+
 					<hr>
 
 					<?php endwhile; else: ?>
