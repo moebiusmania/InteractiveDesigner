@@ -22,6 +22,16 @@ register_sidebar(array(
 	'after_widget'  => '</div>',
 ));
 
+// La barra a destra nella pagina About
+register_sidebar(array(
+	'name' => "Side About",
+	'description'   => 'La barra laterale della pagina About',
+	'before_title'  => '<h4>',
+	'after_title'  => '</h4>',
+	'before_widget'  => '<div id="%1$s" class="widget about">',
+	'after_widget'  => '</div>',
+));
+
 // I box 'Skill Card' (home page)
 register_sidebar(array(
 	'name' => "Box animati",
